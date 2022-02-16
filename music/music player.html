@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+ 
+ 
+
+<html lang="en">
+<head>
+    <title>Music Player</title>
+   <style>
+       *{
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+   
+    
+}
+.section_1{
+    width: 100%;
+    height: 150vh;
+ background-color: #4fb8e2;
+ 
+}
+.header{
+    width: 100%;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    font-size: 75px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bolder;
+    padding-top: 50px;
+    color: rgb(0, 0, 0);
+   
+}
+.audios
+{
+    height: 600px;
+    width: 100%;
+    padding: 50px;
+    margin-left: 0px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    column-gap: calc(4%/3);
+    row-gap: 40px;
+    column-gap: 140px;
+}
+.audio{
+    height: auto;
+    min-height: 40px;
+    width:40%;
+    background-color: #000000;
+    border-radius: 20px;
+    overflow: hidden;
+
+}
+.audio_img{
+    width: 400pxpx;
+    height: 100px;
+
+}
+.audio_img > img {
+    width: 100%;
+}
+.audio_detail{
+    padding: 40px;
+}
+.audio_title{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+}
+.btn{
+    padding: 10px 50px;
+    margin-top: 20px;
+    border: 2px solid white;
+    color: white;
+    text-transform: uppercase;
+    font-weight:bolder;
+    background-color: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.btn:hover {
+    background-color:#4fb8e2;
+    border: 2px solid #6b6445;
+    transform: translateY(5px);
+}
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 100px;
+}
+
+/*section 2  */
+
+.section_2{
+    width: 35%;
+    height: 100vh;
+    background-color: #1d1313;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    justify-content: center;
+}
+.image{
+    width: 100%;
+    height: 400px;
+    overflow:hidden;
+    border-radius: 10px;
+}
+.image > img {
+    width: 100%;
+}
+.audio_player{
+    width: 100%;
+}
+.audio_player_title
+{
+    font-family: segoe UI;
+    color: rgb(45, 102, 167);
+    font-size: 40px;
+}
+audio::-webkit-media-controls-panel
+{
+    background-color: rgb(225,225 ,225 );
+}
+audio::-webkit-media-controls-play-button
+{
+    background-color: rgb(225,225,225 )
+}
+audio::-webkit-media-controls-play-button:hover
+{
+    background-color: rgba(0, 0, 0, 0.349);
+    border-radius: 15px;
+} 
+   </style>
+</head>
+<body>
+
+    <section class="container">
+
+        <div class="section_1">
+
+            <header class="header">
+                <p>
+                    MUSIC PLAYER
+                </p>
+            </header>
+
+            <div class="audios" id="audios">
+
+                    <div class="audio">
+                        <div class="audio_img">
+                            <img src="music/picture/wp8209262-morning-vibes-wallpapers.jpg">
+                        </div>
+                        <div class="audio_detail">
+                            <h1 class="audio_title">Money heist</h1>
+                            <button class="btn" onclick="playAudio(1)">Play</button>
+                        </div>
+                </div>
+
+                <div class="audio">
+                    <div class="audio_img">
+                        <img src="music/picture/wp10477858-scary-devil-wallpapers.jpg">
+                      
+                        
+                    </div>
+                    <div class="audio_detail">
+                        <h1 class="audio_title">moneyheist</h1>
+                        <button class="btn" onclick="playAudio(2)">Play</button>
+                    </div>
+                </div>
+
+                <div class="audio">
+                    <div class="audio_img">
+                        <img src="music/picture/wp8056271-scam-1992-wallpapers.jpg">
+                    </div>
+                    <div class="audio_detail">
+                        <h1 class="audio_title">scam</h1>
+                        <button class="btn" onclick="playAudio(3)">Play</button>
+                    </div>
+                </div>
+
+                <div class="audio">
+                    <div class="audio_img">
+                        <img src="music/picture/wp8358686-aurora-singer-wallpapers.png">
+                    </div>
+                    <div class="audio_detail">
+                        <h1 class="audio_title">idhu enna maayam</h1>
+                        <button class="btn" onclick="playAudio(4)">Play</button>
+                    </div>
+                </div>
+
+                <div class="audio">
+                    <div class="audio_img">
+                        <img src="music/picture/wp8358686-aurora-singer-wallpapers.png">
+                    </div>
+                    <div class="audio_detail">
+                        <h1 class="audio_title">morning vibe</h1>
+                        <button class="btn" onclick="playAudio(5)">Play</button>
+                    </div>
+                </div>
+
+                <div class="audio">
+                    <div class="audio_img">
+                        <img src="music/picture/wp6004697-money-heist-netflix-wallpapers.jpg">
+                    </div>
+                    <div class="audio_detail">
+                        <h1 class="audio_title">Devil</h1>
+                        <button class="btn" onclick="playAudio(6)"> Play</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    
+
+        <div class="section_2">
+
+            <div class="image">
+                <img id="image" src="wp8358686-aurora-singer-wallpapers.png">
+            </div>
+
+            <audio id="audio_player" class="audio_player" src="Aurora - Runaway _ 8D Audio -- __ Dawn of Music __(MP3_160K).mp3" controls></audio>
+
+            <h1 class="audio_player_title" id="audio_player_title">Aurora - Runaway _ 8D Audio</h1>
+
+        </div>
+    </section>
+    <script >
+var songs=[
+
+{
+    id:1,
+    imageSrc:"music/picture/wp8209262-morning-vibes-wallpapers.jpg",
+    audioSrc:"music/wallpaper/Morning Alarm Tone _ Free Download _ Nature And Birds Sounds _ MUSIC COLORS(MP3_320K).mp3",
+    title:"money heist"
+},
+
+{
+    id:2,
+    imageSrc:"music/picture/wp10477858-scary-devil-wallpapers.jpg",
+    audioSrc:"music/wallpaper/Devil ringtone __ Devil bgm ringtone __ villan entry ringtone __ Evil ringtone(MP3_320K).mp3",
+    title:"moneyheist"
+},
+
+{
+    id:3,
+    imageSrc:"music/picture/wp8056271-scam-1992-wallpapers.jpg",
+    audioSrc:"music/wallpaper/Scam 1992 Theme Song (8D AUDIO) - Achint Thakkar _ Harshad Mehta BGM _ Hansal Mehta_ Pratik Gandhi(MP3_128K).mp3",
+    title:" walk to remember"
+},
+
+{
+    id:4,
+    imageSrc:"music/picture/wp8358686-aurora-singer-wallpapers.png",
+    audioSrc:"music/wallpaper/Aurora - Runaway _ 8D Audio -- __ Dawn of Music __(MP3_160K).mp3",
+    title:" walk to remember"
+},
+
+{
+    id:5,
+    imageSrc:"music/picture/wp8358686-aurora-singer-wallpapers.png",
+    audioSrc:"music/wallpaper/Idu Enna Maayam - A walk to Remember Song _ Vikram Prabhu_ G.V. Prakash Kumar(MP3_320K).mp3",
+    title:"a walk to remember"
+},
+
+{
+    id:6,
+    imageSrc:"music/picture/wp6004697-money-heist-netflix-wallpapers.jpg",
+    audioSrc:"music/wallpaper/Moneyheist Ringtone _ Bella Ciao Ringtone _ Download link in description --(MP3_320K)(MP3_160K).mp3",
+    title:" walk to remember"
+},
+
+]
+
+function generateAudioCards()
+{
+
+let htmlString="";
+
+songs.forEach(function(song,index){
+
+
+
+    htmlString+=songHTML;
+
+})
+
+document.getElementById("audios").innerHTML=htmlString;
+
+}
+
+generateAudioCards();
+
+
+function playAudio(songid)
+{
+var song=songs.find(function(song,index){
+    return song.id===songid
+}
+);
+
+document.getElementById("image").src=song.imageSrc;
+document.getElementById("audio_player").src=song.audioSrc;
+document.getElementById("audio_player_title").innerText = song.title;
+document.getElementById("audio_player").play();
+} 
+
+
+    </script>
+</body>
+</html> 
